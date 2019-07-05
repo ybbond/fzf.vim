@@ -307,6 +307,7 @@ Mappings
 | `<plug>(fzf-complete-path)`        | Path completion using `find` (file + dir) |
 | `<plug>(fzf-complete-file)`        | File completion using `find`              |
 | `<plug>(fzf-complete-line)`        | Line completion (all open buffers)        |
+| `<plug>(fzf-complete-path-relative)` | Generate relative path (starting ./ or ../)  |
 | `<plug>(fzf-complete-buffer-line)` | Line completion (current buffer only)     |
 
 ```vim

@@ -148,9 +148,11 @@ augroup END
 inoremap <expr> <plug>(fzf-complete-word)        fzf#vim#complete#word()
 if s:is_win
   inoremap <expr> <plug>(fzf-complete-path)      fzf#vim#complete#path('dir /s/b')
+  inoremap <expr> <plug>(fzf-complete-path-relative)  fzf#vim#complete#path_relative('dir /s/b/')
   inoremap <expr> <plug>(fzf-complete-file)      fzf#vim#complete#path('dir /s/b/a:-d')
 else
   inoremap <expr> <plug>(fzf-complete-path)      fzf#vim#complete#path("find . -path '*/\.*' -prune -o -print \| sed '1d;s:^..::'")
+  inoremap <expr> <plug>(fzf-complete-path-relative)  fzf#vim#complete#path_relative("find . -path '*/\.*' -prune -o -print \| sed '1d;s:^..::'")
   inoremap <expr> <plug>(fzf-complete-file)      fzf#vim#complete#path("find . -path '*/\.*' -prune -o -type f -print -o -type l -print \| sed 's:^..::'")
 endif
 inoremap <expr> <plug>(fzf-complete-file-ag)     fzf#vim#complete#path('ag -l -g ""')
